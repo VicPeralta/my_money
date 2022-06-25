@@ -13,3 +13,56 @@
  *= require_tree .
  *= require_self
  */
+
+ @font-face {
+  font-family: 'novalight';
+  src: url("fonts/nova-light.otf");
+}
+
+@font-face {
+  font-family: 'novabold';
+  src: url("fonts/nova-bold.otf");
+}
+
+/************************************************
+  Reset code
+*************************************************/
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --main-color: #3778c2;
+  --second-color: #5fb523;
+  --text-color: #434b54;
+  --main-bg-color: #3778c2;
+  --second-bg-color: #5fb523;
+  --text-bg-color: #434b54;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+li {
+  margin: 0;
+  padding: 0;
+  font-family: novalight;
+  color: inherit;
+}
+
+input,
+textarea {
+  font-family: inherit;
+  font-size: 1rem;
+  padding: 5px;
+}
