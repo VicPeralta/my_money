@@ -1,6 +1,8 @@
 
 <div class="container">
-  <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+  <%= form_for(resource, as: resource_name, 
+  data: { turbo: false }, 
+  url: session_path(resource_name)) do |f| %>
   <div class="flex main-bg-color color-white justify-center align-center justify-between height-40px">
     <%= link_to "🡄", root_path, method: :get, class:"back" %>
     <h2>Log in</h2>

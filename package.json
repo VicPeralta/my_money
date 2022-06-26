@@ -25,5 +25,9 @@
     "stylelint-config-standard": "^21.0.0",
     "stylelint-csstree-validator": "^1.9.0",
     "stylelint-scss": "^3.21.0"
+  },
+  "dependencies": {
+    "@hotwired/stimulus": "^3.0.1",
+    "from": "^0.1.7"
   }
 }
