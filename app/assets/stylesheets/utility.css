@@ -4,6 +4,26 @@
   font-size: 64px;
 }
 
+.font-small {
+  font-size: .8rem;
+}
+
+.font-large {
+  font-size: 1.3rem;
+}
+
+.font-extra-large {
+  font-size: 2rem;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.italic {
+  font-style: italic;
+}
+
 .flex {
   display: flex;
 }
@@ -26,6 +46,14 @@
 
 .justify-end {
   justify-content: end;
+}
+
+.margin-10 {
+  margin: 10px;
+}
+
+.margin-left-10 {
+  margin: 10px;
 }
 
 .justify-between{
@@ -106,6 +134,10 @@
 
 .main-bg-color {
   background-color: var(--main-bg-color);
+}
+
+.text-color {
+  color: var(--text-color);
 }
 
 .color-white {

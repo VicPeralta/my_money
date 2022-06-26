@@ -2,7 +2,7 @@
 <div class="container">
   <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
   <div class="flex main-bg-color color-white justify-center align-center justify-between height-40px">
-    <%= link_to "🡄", :back, method: :get, class:"back" %>
+    <%= link_to "🡄", root_path, method: :get, class:"back" %>
     <h2>Log in</h2>
     <div class="actions color-white">
       <%= f.submit "Log in" %>
@@ -16,6 +16,7 @@
     <div class="field">
       <%= link_to "Forgot your password?", new_password_path(resource_name) %>
     </div>
+     <%= render "devise/shared/error_messages", resource: resource %>
   <% end %>
 </div>
 

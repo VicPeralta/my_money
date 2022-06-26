@@ -58,6 +58,7 @@ h5,
 h6,
 p,
 ul,
+label,
 li {
   margin: 0;
   padding: 0;
@@ -90,12 +91,22 @@ textarea {
   display: block;
 }
 
+.field img {
+  width: 90px;
+  height: auto;
+}
+
 .actions input {
   background-color: inherit;
   border: none;
   color: white;
   margin-inline: 3px;
   font-size: 1.1rem;
+}
+
+.select-image {
+  background-color: inherit;
+  border:none;
 }
 
 .back {
