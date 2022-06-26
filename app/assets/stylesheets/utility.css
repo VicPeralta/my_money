@@ -36,6 +36,22 @@
   flex: 2;
 }
 
+.fixed {
+  position: fixed;
+}
+
+.rounded {
+  border-radius: 8px;
+}
+
+.top-5 {
+  top: 5px;
+}
+
+.right {
+  right: 5px;
+}
+
 .align-center {
   align-items: center;
 }
@@ -71,6 +87,7 @@
 .btn {
   border: none;
   font-size: 1.1rem;
+  background-color: inherit;
 }
 
 .btn:active {
@@ -120,6 +137,22 @@
   height: 40px;
 }
 
+.height-10px {
+  height: 10px;
+}
+
+.height-20px {
+  height: 20px;
+}
+
+.ml-10{
+  margin-left: 10px;
+}
+
+.ml-20{
+  margin-left: 20px;
+}
+
 .padding-10 {
   padding: 10px;
 }
@@ -130,6 +163,14 @@
 
 .main-color {
   color: var(--main-color);
+}
+
+.second-color {
+  color: var(--second-color);
+}
+
+.second-bg-color {
+  background-color: var(--second-bg-color);
 }
 
 .main-bg-color {
