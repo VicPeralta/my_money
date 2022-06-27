@@ -1,3 +1,4 @@
+
 <div>
   <%= form_for(resource, as: resource_name, 
     data: { turbo: false }, 
@@ -12,10 +13,8 @@
     <div class="field">
       <div class="flex row align-center margin-10">
         <img src=<%=image_path("user.png")%>/>
-        <div>
-          <label class="text-color font-large margin-left-10">Upload picture </label>
-          <%= f.file_field :image %> </br>
-        </div>
+        <label id="label-for-image" for="user_image" class="text-color font-large margin-left-10 underlined">Upload picture </label>
+        <%= f.file_field :image, class:"inputfile" %>
       </div>
       <%= f.text_field :name, autofocus: true, autocomplete: "name", placeholder: "Ful name" %>
       <%= f.email_field :email, autofocus: true, autocomplete: "email", placeholder: "Email" %>
@@ -24,4 +23,12 @@
     <%= render "devise/shared/error_messages", resource: resource %>
   <% end %>
 </div>
-
+<script>
+  document.getElementById('user_image').addEventListener('change', (e) => {
+    if(e.target.files.length == 1){
+      fileName = e.target.files[0].name;
+      document.getElementById('label-for-image').textContent = fileName;
+    }
+    console.log(e.target.files)
+  });
+</script>

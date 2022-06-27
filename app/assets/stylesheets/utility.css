@@ -12,6 +12,10 @@
   font-size: 1.3rem;
 }
 
+.underlined {
+  text-decoration: underline;
+}
+
 .font-extra-large {
   font-size: 2rem;
 }
