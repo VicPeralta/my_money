@@ -14,7 +14,7 @@
  *= require_self
  */
 
- @font-face {
+@font-face {
   font-family: 'novalight';
   src: url("fonts/nova-light.otf");
 }
@@ -62,7 +62,7 @@ label,
 li {
   margin: 0;
   padding: 0;
-  font-family: 'novalight';
+  font-family: 'novalight', Arial, Helvetica, sans-serif;
   color: inherit;
 }
 
@@ -81,7 +81,7 @@ textarea {
 
 .field {
   width: 100%;
-  margin:20px auto;
+  margin: 20px auto;
 }
 
 .field a {
@@ -106,7 +106,7 @@ textarea {
 
 .select-image {
   background-color: inherit;
-  border:none;
+  border: none;
 }
 
 .back {

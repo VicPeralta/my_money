@@ -5,7 +5,7 @@
 }
 
 .font-small {
-  font-size: .8rem;
+  font-size: 0.8rem;
 }
 
 .font-large {
@@ -72,7 +72,7 @@
   margin: 10px;
 }
 
-.justify-between{
+.justify-between {
   justify-content: space-between;
 }
 
@@ -145,11 +145,11 @@
   height: 20px;
 }
 
-.ml-10{
+.ml-10 {
   margin-left: 10px;
 }
 
-.ml-20{
+.ml-20 {
   margin-left: 20px;
 }
 
