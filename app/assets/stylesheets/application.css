@@ -123,3 +123,11 @@ textarea {
   position: absolute;
   z-index: -1;
 }
+
+.hamburger-button {
+  background-color: inherit;
+  color: inherit;
+  font-size: 2rem;
+  border: none;
+  margin-inline: 5px;
+}

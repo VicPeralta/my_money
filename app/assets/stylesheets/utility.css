@@ -40,6 +40,10 @@
   flex: 2;
 }
 
+.flex-3 {
+  flex: 3;
+}
+
 .fixed {
   position: fixed;
 }
@@ -54,6 +58,10 @@
 
 .right {
   right: 5px;
+}
+
+.text-center {
+  text-align: center;
 }
 
 .align-center {
@@ -72,6 +80,10 @@
   margin: 10px;
 }
 
+.margin-20 {
+  margin: 20px;
+}
+
 .margin-left-10 {
   margin: 10px;
 }
@@ -86,6 +98,16 @@
 
 .vertical-100 {
   height: 100vh;
+}
+
+.img-w90 {
+  width: 90px;
+  height: auto;
+}
+
+.img-w60 {
+  width: 60px;
+  height: auto;
 }
 
 .btn {
@@ -187,4 +209,18 @@
 
 .color-white {
   color: white;
+}
+
+.color-bg-white {
+  background-color: white;
+}
+
+.link {
+  border: none;
+  background-color: inherit;
+  text-decoration: underline;
+}
+
+.link:hover {
+  text-decoration: underline;
 }

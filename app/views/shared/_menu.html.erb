@@ -1,0 +1,23 @@
+<div class="menu-options invisible">
+  <button type="button" id="close-btn">X</button>
+  <div class="rounded flex justify-center">
+    <% if current_user.image.attached?%>
+      <%= image_tag(current_user.image.representation(resize_to_limit: [100, 100]), class:"rounded") %>
+    <%else%>
+      <img src=<%=image_path("user.png")%> class="rounded"/>
+    <%end%>
+  </div>
+  <h3 class="color-white margin-20 text-center">
+    <%=current_user.name%>
+  </h3>
+  <ul>
+    <li>
+      <%= link_to "Home", root_path, class: '' %>
+    <li>
+      <%=link_to "Log out", destroy_user_session_path, 
+          method: :delete, data: { "turbo-method": :delete } %>
+    </li>
+  </ul>
+  <hr>
+  <%= javascript_include_tag 'menu' %>
+</div>
