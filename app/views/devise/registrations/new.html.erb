@@ -12,7 +12,10 @@
     <div class="field">
       <div class="flex row align-center margin-10">
         <img src=<%=image_path("user.png")%>/>
-        <label class="text-color font-large margin-left-10">Upload picture </label>
+        <div>
+          <label class="text-color font-large margin-left-10">Upload picture </label>
+          <%= f.file_field :image %> </br>
+        </div>
       </div>
       <%= f.text_field :name, autofocus: true, autocomplete: "name", placeholder: "Ful name" %>
       <%= f.email_field :email, autofocus: true, autocomplete: "email", placeholder: "Email" %>
