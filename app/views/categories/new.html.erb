@@ -1,0 +1,32 @@
+<div class="container">
+  <%= form_with model: @category, method:'post', class:'form',url: categories_create_path do |form| %>
+  <div class="flex main-bg-color color-white justify-center align-center justify-between height-40px">
+    <%= link_to "🡄", :back, method: :get, class:"back" %>
+    <h2>Add Category</h2>
+    <div class="actions color-white">
+      <%= form.submit "Create" %>
+    </div>
+  </div>
+    <div class="field">
+      <div class="flex row align-center margin-10">
+        <img src=<%=image_path("save-money.png")%>/>
+        <label id="label-for-image" for="category_image" 
+            class="text-color font-large margin-left-10 underlined">
+          Upload picture 
+        </label>
+        <%= form.file_field :image, class:"inputfile" %>
+      </div>
+      <%= form.text_field :name, autofocus: true, placeholder: "Name" %>
+    </div>
+  <% end %>
+</div>
+
+<script>
+  document.getElementById('category_image').addEventListener('change', (e) => {
+    if(e.target.files.length == 1){
+      fileName = e.target.files[0].name;
+      document.getElementById('label-for-image').textContent = fileName;
+    }
+    console.log(e.target.files)
+  });
+</script>
