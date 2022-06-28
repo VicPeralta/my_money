@@ -47,6 +47,9 @@ You can try the functionality of this application by clicking:
 - Linkedin: [@VicPeralta](https://www.linkedin.com/in/vicperalta/)
 
 
+## Credits
+[Original design idea by  Gregoire Vella on Behance](https://www.behance.net/gallery/19759151/Snapscan-iOs-design-and-branding)
+
 ## 🤝 Contributing
 
 Contributions, issues, and feature requests are welcome!

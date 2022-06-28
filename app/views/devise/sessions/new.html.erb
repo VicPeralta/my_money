@@ -4,9 +4,9 @@
   data: { turbo: false }, 
   url: session_path(resource_name)) do |f| %>
   <div class="flex main-bg-color color-white justify-center align-center justify-between height-40px">
-    <%= link_to "🡄", root_path, method: :get, class:"back" %>
+    <%= link_to "🡄", root_path, method: :get, class:"back ml-10" %>
     <h2>Log in</h2>
-    <div class="actions color-white">
+    <div class="actions color-white mr-10">
       <%= f.submit "Log in" %>
     </div>
   </div>

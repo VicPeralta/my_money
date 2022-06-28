@@ -31,3 +31,7 @@
 /config/master.key
 
 node_modules/
+
+gcs.keyfile
+enviroment.bat
+heroku.env

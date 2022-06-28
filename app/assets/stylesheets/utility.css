@@ -56,6 +56,10 @@
   top: 5px;
 }
 
+.bottom-5 {
+  bottom: 5px;
+}
+
 .right {
   right: 5px;
 }
@@ -110,6 +114,11 @@
 
 .img-w90 {
   width: 90px;
+  height: auto;
+}
+
+.img-w100 {
+  width: 100px;
   height: auto;
 }
 
