@@ -1,0 +1,20 @@
+<div class="flex main-bg-color color-white justify-center align-center justify-between height-40px">
+   <%= link_to "🡄", :back, method: :get, class:"back" %>
+  <h2>Details</h2>
+  <div class="actions color-white">
+    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 height-20px ml-20" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+      <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+    </svg>
+  </div>
+</div>
+<div class="flex column justify-between color-bg-white padding-20">
+  <div class="flex margin-bottom-10">
+    <p class="bold">Transaction #</p>
+    <p class="bold"><%=@transaction.id%></p>
+  </div>
+  <div class="flex justify-between margin-bottom-10">
+    <p class="text text-color bold"><%=@transaction.name%></p>
+    <p class="text"><%=number_to_currency @transaction.amount%></p>
+  </div>
+  <p class="font-small italic"><%=@transaction.created_at.strftime("%Y/%m/%d %H:%M:%S")%></p>
+</div>
