@@ -10,6 +10,12 @@ require 'rails_helper'
 #     end
 #   end
 # end
+
 RSpec.describe FlashHelper, type: :helper do
-  pending "add some examples to (or delete) #{__FILE__}"
+  it 'Returns the alert css' do
+    expect(helper.css_for_flash('alert')).to be == 'alert-bg-color'
+  end
+  it 'Returns the notice css' do
+    expect(helper.css_for_flash('notice')).to be == 'second-bg-color'
+  end
 end
