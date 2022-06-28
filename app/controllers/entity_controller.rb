@@ -1,6 +1,35 @@
 class EntityController < ApplicationController
   def index
     @category = Category.find(params[:category_id])
-    @entities = Entity.where(category_id: params[:category_id], user: current_user)
+    @entities = Entity.where(category_id: params[:category_id], user: current_user).order('created_at ASC')
+  end
+
+  def show
+    @transaction = Entity.find(params[:entity_id])
+  end
+
+  def new
+    puts 'Processing new'
+    @category = Category.find(params[:category_id])
+    @entity = Entity.new
+  end
+
+  def create
+    puts 'Processing create'
+    transaction = Entity.new(entity_params)
+    transaction.category_id = params[:category_id]
+    transaction.user = current_user
+    if transaction.valid?
+      transaction.save
+      redirect_to entity_index_path(category_id: params[:category_id]), notice: 'Transaction added'
+    else
+      render entity_new_path(category_id: @category.id), alert: 'There was an error'
+    end
+  end
+
+  private
+
+  def entity_params
+    params.require(:entity).permit(:name, :amount)
   end
 end

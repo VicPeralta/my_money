@@ -1,0 +1,17 @@
+<div class="container">
+  <%= form_with model: @entity, method:'post', 
+      class:'form',
+      url: entity_create_path(category_id: @category.id) do |form| %>
+  <div class="flex main-bg-color color-white justify-center align-center justify-between height-40px">
+    <%= link_to "🡄", entity_index_path(category_id: @category.id), method: :get, class:"back" %>
+    <h2>Add Transaction</h2>
+    <div class="actions color-white">
+      <%= form.submit "Create" %>
+    </div>
+  </div>
+    <div class="field">
+      <%= form.text_field :name, autofocus: true, placeholder: "Name" %>
+      <%= form.number_field :amount, autofocus: true, placeholder: "Amount" %>
+    </div>
+  <% end %>
+</div>

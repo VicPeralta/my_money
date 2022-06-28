@@ -1,7 +1,7 @@
 <div class="container">
   <%= form_with model: @category, method:'post', class:'form',url: categories_create_path do |form| %>
   <div class="flex main-bg-color color-white justify-center align-center justify-between height-40px">
-    <%= link_to "🡄", :back, method: :get, class:"back" %>
+    <%= link_to "🡄", categories_index_path, method: :get, class:"back" %>
     <h2>Add Category</h2>
     <div class="actions color-white">
       <%= form.submit "Create" %>
