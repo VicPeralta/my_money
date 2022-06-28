@@ -64,6 +64,10 @@
   text-align: center;
 }
 
+.text {
+  text-decoration: none;
+}
+
 .align-center {
   align-items: center;
 }
@@ -85,8 +89,13 @@
 }
 
 .margin-left-10 {
-  margin: 10px;
+  margin-left: 10px;
 }
+
+.margin-bottom-10 {
+  margin-bottom: 10px;
+}
+
 
 .justify-between {
   justify-content: space-between;

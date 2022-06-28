@@ -10,6 +10,7 @@
 <%= render "shared/menu"%>
 <div class="container flex column gap-10">  
   <%@categories.each do |category|%>
+  <a href=<%=entity_index_path(category_id: category.id )%> class="text">
     <div class="flex justify-between padding-20 color-bg-white">
       <% if category.image.attached?%>
         <%= image_tag(category.image.representation(resize_to_limit: [100, 100]), class:"rounded img-w60 flex-1") %>
@@ -17,10 +18,11 @@
         <img src=<%=image_path("save-money.png")%> class="rounded img-w60 flex-1"/>
        <%end%>
       <div class="flex align-center flex-3 justify-between padding-20">
-        <p class="font-large text-color"> <%=category.name%> </p>
-        <p class="bold" >  <%=number_to_currency category.entities.where(user: current_user).sum(:amount)%> </p>
+        <p class="font-large text-color text"> <%=category.name%> </p>
+        <p class="bold text text-color" >  <%=number_to_currency category.entities.where(user: current_user).sum(:amount)%> </p>
       </div>
     </div>
+  <a/>
   <%end%>
 </div>
  <%=button_to 'Add Category', categories_new_path, method: :get,
