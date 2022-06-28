@@ -1,10 +1,8 @@
 Rails.application.routes.draw do
-  get 'categories/index'
   devise_for :users
+  get '/categories/index', to: "categories#index"
+  get '/categories/new', to: "categories#new", as: 'categories_new'
+  post '/categories/new', to: "categories#create", as: 'categories_create'
   root 'splash#show'
   get 'splash/show'
-  # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
-
-  # Defines the root path route ("/")
-  # root "articles#index"
 end

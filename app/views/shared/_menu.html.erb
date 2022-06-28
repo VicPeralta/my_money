@@ -1,7 +1,7 @@
 <div class="menu-options invisible">
   <button type="button" id="close-btn">X</button>
   <div class="rounded flex justify-center">
-    <% if current_user.image.attached?%>
+    <% if current_user.image%>
       <%= image_tag(current_user.image.representation(resize_to_limit: [100, 100]), class:"rounded") %>
     <%else%>
       <img src=<%=image_path("user.png")%> class="rounded"/>

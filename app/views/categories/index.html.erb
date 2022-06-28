@@ -11,7 +11,11 @@
 <div class="container flex column gap-10">  
   <%@categories.each do |category|%>
     <div class="flex justify-between padding-20 color-bg-white">
-      <img  class="img-w60 flex-1" src=<%=image_path("save-money.png") %>/>
+      <% if category.image.attached?%>
+        <%= image_tag(category.image.representation(resize_to_limit: [100, 100]), class:"rounded img-w60 flex-1") %>
+      <%else%>
+        <img src=<%=image_path("save-money.png")%> class="rounded img-w60 flex-1"/>
+       <%end%>
       <div class="flex align-center flex-3 justify-between padding-20">
         <p class="font-large text-color"> <%=category.name%> </p>
         <p class="bold" >  <%=number_to_currency category.entities.where(user: current_user).sum(:amount)%> </p>
@@ -19,3 +23,6 @@
     </div>
   <%end%>
 </div>
+ <%=button_to 'Add Category', categories_new_path, method: :get,
+    class:'btn color-white second-bg-color padding-10 width-100 height-70px'%>
+
