@@ -14,7 +14,7 @@ class CategoriesController < ApplicationController
       category.save
       redirect_to categories_index_path, notice: 'Category added'
     else
-      render new, alert: 'There was an error'
+      redirect_to categories_new_path, alert: category.errors.first.message, status: 400
     end
   end
 
