@@ -13,7 +13,7 @@
   <a href=<%=entity_index_path(category_id: category.id )%> class="text">
     <div class="flex justify-between padding-20 color-bg-white">
       <% if category.image.attached?%>
-        <%= image_tag(category.image.representation(resize_to_limit: [100, 100]), class:"rounded img-w60 flex-1") %>
+        <img src=<%=url_for(category.image)%> class="rounded img-w100"/>
       <%else%>
         <img src=<%=image_path("save-money.png")%> class="rounded img-w60 flex-1"/>
        <%end%>
