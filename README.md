@@ -1,24 +1,59 @@
-# README
+![](https://img.shields.io/badge/Microverse-blueviolet)
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+# My Money!
 
-Things you may want to cover:
+An app that helps you to keep track of all your expenses. 
 
-* Ruby version
+## Built With
 
-* System dependencies
+- Ruby
+- Rails
 
-* Configuration
+## Prerequisites  
+- PostgreSql   
+- Ruby (2.7 or newer)
+- Bundle (2.1.4 or newer)
 
-* Database creation
+## Getting Started
 
-* Database initialization
+To get a local copy follow these simple steps.  
 
-* How to run the test suite
+1.- Open the terminal window and clone the repository using this command:  
+`git clone git@github.com:VicPeralta/my_money.git` 
 
-* Services (job queues, cache servers, search engines, etc.)
+2.- Change the directory to the my_money directory  
+`cd my_money`  
+3.- Install the project's dependencies by running these commands:   
+`bundle install`   
+`npm install`   
+4.- Change the database configuration file (`database.yml`) to fit your local database's settings   
+5.- Start the server using this command:  
+`rails s`   
+6.- Open the browser at this address:  
+`http://127.0.0.1:3000/`   
 
-* Deployment instructions
+![](./blogApp.gif)
 
-* ...
+## Live demo
+
+You can try the functionality of this application by clicking: 
+[Demo](https://safe-brook-54426.herokuapp.com/)
+
+## Authors
+
+👤 **Victor Peralta**
+- GitHub: [@VicPeralta](https://github.com/VicPeralta)
+- Twitter: [@VicPeralta](https://twitter.com/VicPeralta)
+- Linkedin: [@VicPeralta](https://www.linkedin.com/in/vicperalta/)
+
+
+## 🤝 Contributing
+
+Contributions, issues, and feature requests are welcome!
+
+Feel free to check the [issues page](../../issues/).
+
+## Show your support
+
+Give a ⭐️ if you like this project!
+The gem is available as open source under the terms of the [MIT License](https://opensource.org/licenses/MIT).

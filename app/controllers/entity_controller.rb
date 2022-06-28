@@ -23,7 +23,8 @@ class EntityController < ApplicationController
       transaction.save
       redirect_to entity_index_path(category_id: params[:category_id]), notice: 'Transaction added'
     else
-      render entity_new_path(category_id: @category.id), alert: 'There was an error'
+      redirect_to entity_new_path(category_id: params[:category_id]),
+                  alert: transaction.errors.first.message, status: 400
     end
   end
 
