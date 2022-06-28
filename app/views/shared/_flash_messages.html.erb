@@ -1,6 +1,6 @@
 <% flash.each do |key, message|%>
   <div data-controller="flash" 
-    class="fixed flex top-5 right-5 <%=css_for_flash(key)%> rounded padding-20 color-white align-center height-40px">
+    class="fixed flex bottom-5 right-5 <%=css_for_flash(key)%> rounded padding-20 color-white align-center height-40px">
     <%=message%>
     <button type="button" data-action="flash#dismiss" class="btn color-white">
       <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 height-20px ml-20" viewBox="0 0 20 20" fill="currentColor">
