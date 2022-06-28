@@ -1,3 +1,4 @@
+console.log('Loading menu.js')
 function makeScrollable() {
   const body = document.querySelector('body');
   body.classList.remove('makeNotScrollable');
@@ -17,24 +18,13 @@ function closeMenu() {
   makeScrollable();
 }
 
-const optionsBtn = document.querySelector('.hamburger-button');
-optionsBtn.addEventListener('click', () => {
+document.querySelector('.hamburger-button').addEventListener('click', () => {
   const menu = document.querySelector('.menu-options');
   menu.classList.remove('invisible');
   menu.classList.add('visible');
   makeNotScrollable();
 });
 
-const closeOption = document.querySelector('#close-btn');
-closeOption.addEventListener('click', () => {
+document.querySelector('#close-btn').addEventListener('click', () => {
   closeMenu();
-});
-
-document.addEventListener('click', (e) => {
-  if (e.target.matches('.menu-options ul li a')) {
-    const menu = document.querySelector('.menu-options');
-    menu.classList.remove('visible');
-    menu.classList.add('invisible');
-    makeScrollable();
-  }
 });

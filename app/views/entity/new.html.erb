@@ -3,9 +3,9 @@
       class:'form',
       url: entity_create_path(category_id: @category.id) do |form| %>
   <div class="flex main-bg-color color-white justify-center align-center justify-between height-40px">
-    <%= link_to "🡄", entity_index_path(category_id: @category.id), method: :get, class:"back" %>
+    <%= link_to "🡄", entity_index_path(category_id: @category.id), method: :get, class:"back ml-10" %>
     <h2>Add Transaction</h2>
-    <div class="actions color-white">
+    <div class="actions color-white mr-10">
       <%= form.submit "Create" %>
     </div>
   </div>
