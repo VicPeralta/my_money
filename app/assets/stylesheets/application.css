@@ -112,7 +112,7 @@ textarea {
 .back {
   text-decoration: none;
   color: white;
-  font-size: 1.3rem;
+  width: 24px;
 }
 
 .inputfile {

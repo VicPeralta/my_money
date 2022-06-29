@@ -6,6 +6,7 @@ class EntityController < ApplicationController
 
   def show
     @transaction = Entity.find(params[:entity_id])
+    @category = Category.find(params[:category_id])
   end
 
   def new
