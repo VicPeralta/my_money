@@ -1,0 +1,28 @@
+
+<div class="container">
+  <%= form_for(resource, as: resource_name, 
+  data: { turbo: false }, 
+  url: session_path(resource_name)) do |f| %>
+  <div class="flex main-bg-color color-white justify-center align-center justify-between height-40px">
+    <a class="back ml-10 color-white" data-method="get" href="<%=root_path%>">
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 color-white" viewBox="0 0 20 20" fill="currentColor">
+        <path fill-rule="evenodd" d="M9.707 16.707a1 1 0 01-1.414 0l-6-6a1 1 0 010-1.414l6-6a1 1 0 011.414 1.414L5.414 9H17a1 1 0 110 2H5.414l4.293 4.293a1 1 0 010 1.414z" clip-rule="evenodd" />
+      </svg>
+    </a>
+    <h2>Log in</h2>
+    <div class="actions color-white mr-10">
+      <%= f.submit "Log in" %>
+    </div>
+  </div>
+    <div class="field">
+      <%= f.email_field :email, autofocus: true, autocomplete: "email", placeholder: "Email" %>
+   
+      <%= f.password_field :password, autocomplete: "current-password", placeholder: "Password" %>
+    </div>
+    <div class="field">
+      <%= link_to "Forgot your password?", new_password_path(resource_name) %>
+    </div>
+     <%= render "devise/shared/error_messages", resource: resource %>
+  <% end %>
+</div>
+

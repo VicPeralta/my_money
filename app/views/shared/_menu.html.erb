@@ -1,0 +1,23 @@
+<div class="menu-options invisible">
+  <button type="button" id="close-btn">X</button>
+  <div class="rounded flex justify-center">
+    <% if current_user.image.attached?%>
+      <img src=<%=url_for(current_user.image)%> class="rounded img-w100"/>
+    <%else%>
+      <img src=<%=image_path("user.png")%> class="rounded img-w100"/>
+    <%end%>
+  </div>
+  <h3 class="color-white margin-20 text-center">
+    <%=current_user.name%>
+  </h3>
+  <ul>
+    <li>
+      <%= link_to "Home", root_path, class: '' %>
+    <li>
+      <%=link_to "Log out", destroy_user_session_path, 
+          method: :get %>
+    </li>
+  </ul>
+  <hr>
+  <%= javascript_include_tag 'menu_code' %>
+</div>
