@@ -1,4 +1,3 @@
-console.log('Loading menu.js')
 function makeScrollable() {
   const body = document.querySelector('body');
   body.classList.remove('makeNotScrollable');

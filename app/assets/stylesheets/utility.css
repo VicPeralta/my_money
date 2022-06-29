@@ -259,3 +259,15 @@
 .link:hover {
   text-decoration: underline;
 }
+
+body {
+  width: 100%;
+}
+
+
+@media (min-width: 500px) {
+  body {
+    width: 80%;
+    margin-inline: auto;
+  }
+}
