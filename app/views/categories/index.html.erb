@@ -11,7 +11,7 @@
 <div class="container flex column gap-10">  
   <%@categories.each do |category|%>
   <a href=<%=entity_index_path(category_id: category.id )%> class="text">
-    <div class="flex justify-between padding-20 color-bg-white">
+    <div class="flex justify-between padding-20 color-bg-white" data-id=<%="category-#{category.id}"%>>
       <% if category.image.attached?%>
         <img src=<%=url_for(category.image)%> class="rounded img-w100"/>
       <%else%>

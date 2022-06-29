@@ -4,7 +4,8 @@ RSpec.describe 'Entities', type: :request do
   describe 'GET /index' do
     it 'returns http success' do
       get '/entity/index'
-      expect(response).to have_http_status(:success)
+      # Expected to be found but inaccesible due to authorization
+      expect(response).to have_http_status(:found)
     end
   end
 end
