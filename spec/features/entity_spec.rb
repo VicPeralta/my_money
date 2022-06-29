@@ -46,7 +46,7 @@ RSpec.describe 'Transactions pages', type: :feature do
 
   it 'Navigate to transactions\'s detail page' do
     click_link(@transaction.name)
-    expect(current_path).to be == entity_detail_path(entity_id: @transaction.id)
+    expect(current_path).to be == entity_detail_path(entity_id: @transaction.id, category_id: @category.id)
     expect(page).to have_content('Details')
   end
 end
