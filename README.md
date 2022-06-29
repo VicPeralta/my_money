@@ -24,12 +24,12 @@ To get a local copy follow these simple steps.
 2.- Change the directory to the my_money directory  
 `cd my_money`  
 3.- Install the project's dependencies by running these commands:   
-`bundle install`   
 `npm install`   
 4.- Change the database configuration file (`database.yml`) to fit your local database's settings   
-5.- Start the server using this command:  
+5.- For Google Cloud Storage, please provide all the information needed in the config/storage.yml, section :google. Or change the storage provider to suit your needs.  
+6.- Start the server using this command:  
 `rails s`   
-6.- Open the browser at this address:  
+7.- Open the browser at this address:  
 `http://127.0.0.1:3000/`   
 
 ![](./money.gif)

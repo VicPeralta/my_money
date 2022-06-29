@@ -112,7 +112,7 @@ textarea {
 .back {
   text-decoration: none;
   color: white;
-  font-size: 1.3rem;
+  width: 24px;
 }
 
 .inputfile {
@@ -127,7 +127,7 @@ textarea {
 .hamburger-button {
   background-color: inherit;
   color: inherit;
-  font-size: 2rem;
+  width: 30px;
   border: none;
   margin-inline: 5px;
 }

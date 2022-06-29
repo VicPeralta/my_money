@@ -136,6 +136,7 @@
 .btn:active {
   background-color: var(--main-bg-color);
   border: none;
+  color: white;
 }
 
 .border-second-color {
@@ -146,6 +147,7 @@
   background-color: var(--main-bg-color);
   border: none;
   outline: none;
+  color: white;
 }
 
 .margin-auto {
@@ -256,4 +258,15 @@
 
 .link:hover {
   text-decoration: underline;
+}
+
+body {
+  width: 100%;
+}
+
+@media (min-width: 500px) {
+  body {
+    width: 80%;
+    margin-inline: auto;
+  }
 }
