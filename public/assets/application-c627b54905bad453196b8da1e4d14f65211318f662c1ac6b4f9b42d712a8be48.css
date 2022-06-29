@@ -1,0 +1,466 @@
+.menu-options {
+  background-color: var(--main-bg-color);
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  backdrop-filter: blur(6px);
+  left: 0;
+  top: 0;
+}
+
+.menu-options button {
+  background-color: transparent;
+  color: #fff;
+  border: none;
+  margin-top: 20px;
+  margin-right: 20px;
+  margin-left: auto;
+  width: 50px;
+  font-size: 24px;
+  display: block;
+}
+
+.menu-options ul {
+  list-style: none;
+  margin: 0 0 0 20px;
+  padding: 0;
+}
+
+.menu-options ul li {
+  margin-top: 20px;
+  margin-right: 40px;
+}
+
+.menu-options ul li a {
+  font-size: 27px;
+  font-style: normal;
+  line-height: 44px;
+  letter-spacing: 0;
+  text-align: left;
+  color: white;
+  text-decoration: none;
+}
+
+.makeScrollable {
+  overflow-y: visible;
+}
+
+.makeNotScrollable {
+  overflow-y: hidden;
+}
+
+.visible {
+  display: block;
+  z-index: 1;
+}
+
+.invisible {
+  display: none;
+  z-index: 1;
+}
+
+.menu-options hr {
+  color: #000;
+  background-color: black;
+  height: 4px;
+  position: absolute;
+  width: 40%;
+  bottom: 0;
+  left: 30%;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+.font-title {
+  font-family: 'Pacifico', cursive;
+  font-size: 64px;
+}
+
+.font-small {
+  font-size: 0.8rem;
+}
+
+.font-large {
+  font-size: 1.3rem;
+}
+
+.underlined {
+  text-decoration: underline;
+}
+
+.font-extra-large {
+  font-size: 2rem;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.italic {
+  font-style: italic;
+}
+
+.flex {
+  display: flex;
+}
+
+.flex-1 {
+  flex: 1;
+}
+
+.flex-2 {
+  flex: 2;
+}
+
+.flex-3 {
+  flex: 3;
+}
+
+.fixed {
+  position: fixed;
+}
+
+.rounded {
+  border-radius: 8px;
+}
+
+.top-5 {
+  top: 5px;
+}
+
+.bottom-5 {
+  bottom: 5px;
+}
+
+.right {
+  right: 5px;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text {
+  text-decoration: none;
+}
+
+.align-center {
+  align-items: center;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.justify-end {
+  justify-content: end;
+}
+
+.margin-10 {
+  margin: 10px;
+}
+
+.margin-20 {
+  margin: 20px;
+}
+
+.margin-left-10 {
+  margin-left: 10px;
+}
+
+.margin-bottom-10 {
+  margin-bottom: 10px;
+}
+
+.justify-between {
+  justify-content: space-between;
+}
+
+.column {
+  flex-direction: column;
+}
+
+.vertical-100 {
+  height: 100vh;
+}
+
+.img-w90 {
+  width: 90px;
+  height: auto;
+}
+
+.img-w100 {
+  width: 100px;
+  height: auto;
+}
+
+.img-w60 {
+  width: 60px;
+  height: auto;
+}
+
+.btn {
+  border: none;
+  font-size: 1.1rem;
+  background-color: inherit;
+}
+
+.btn:active {
+  background-color: var(--main-bg-color);
+  border: none;
+  color: white;
+}
+
+.border-second-color {
+  border: 1px solid var(--second-color);
+}
+
+.btn:focus-visible {
+  background-color: var(--main-bg-color);
+  border: none;
+  outline: none;
+  color: white;
+}
+
+.margin-auto {
+  margin-inline: auto;
+}
+
+.margin-button-10 {
+  margin-bottom: 10px;
+}
+
+.margin-button-20 {
+  margin-bottom: 20px;
+}
+
+.margin-button-30 {
+  margin-bottom: 30px;
+}
+
+.gap-10 {
+  gap: 10px;
+}
+
+.width-90 {
+  width: 90%;
+}
+
+.width-100 {
+  width: 100%;
+}
+
+.height-70px {
+  height: 70px;
+}
+
+.height-40px {
+  height: 40px;
+}
+
+.height-10px {
+  height: 10px;
+}
+
+.height-20px {
+  height: 20px;
+}
+
+.ml-10 {
+  margin-left: 10px;
+}
+
+.ml-20 {
+  margin-left: 20px;
+}
+
+.mr-10 {
+  margin-right: 10px;
+}
+
+.mr-20 {
+  margin-right: 20px;
+}
+
+.padding-10 {
+  padding: 10px;
+}
+
+.padding-20 {
+  padding: 20px;
+}
+
+.main-color {
+  color: var(--main-color);
+}
+
+.second-color {
+  color: var(--second-color);
+}
+
+.alert-bg-color {
+  background-color: #dc3545;
+}
+
+.second-bg-color {
+  background-color: var(--second-bg-color);
+}
+
+.main-bg-color {
+  background-color: var(--main-bg-color);
+}
+
+.text-color {
+  color: var(--text-color);
+}
+
+.color-white {
+  color: white;
+}
+
+.color-bg-white {
+  background-color: white;
+}
+
+.link {
+  border: none;
+  background-color: inherit;
+  text-decoration: underline;
+}
+
+.link:hover {
+  text-decoration: underline;
+}
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS (and SCSS, if configured) file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+
+
+ */
+
+@font-face {
+  font-family: 'novalight';
+  src: url(/assets/fonts/nova-light-85a9c6457d4c9f21a40ed676cd39d6b77d2b92e221ede53e2379f6495c8e6bdc.otf);
+}
+
+@font-face {
+  font-family: 'novabold';
+  src: url(/assets/fonts/nova-bold-2755b4e805d647b756c5c642107f693b391039ad8d4116f79aad8cc95666c110.otf);
+}
+
+@font-face {
+  font-family: 'Pacifico';
+  src: url(/assets/fonts/Pacifico-Regular-d2c27ad83a5c6757c648f945d01f62fb986703a73582fc7a9ccff20e73f7cfe9.ttf);
+}
+
+/************************************************
+  Reset code
+*************************************************/
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --main-color: #3778c2;
+  --second-color: #5fb523;
+  --text-color: #434b54;
+  --main-bg-color: #3778c2;
+  --second-bg-color: #5fb523;
+  --text-bg-color: #434b54;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+label,
+li {
+  margin: 0;
+  padding: 0;
+  font-family: 'novalight', Arial, Helvetica, sans-serif;
+  color: inherit;
+}
+
+body {
+  background-color: whitesmoke;
+}
+
+.field input,
+textarea {
+  font-family: inherit;
+  font-size: 1.2rem;
+  padding: 10px;
+  width: 100%;
+  outline: none;
+}
+
+.field {
+  width: 100%;
+  margin: 20px auto;
+}
+
+.field a {
+  text-decoration: none;
+  width: fit-content;
+  margin-inline: auto;
+  display: block;
+}
+
+.field img {
+  width: 90px;
+  height: auto;
+}
+
+.actions input {
+  background-color: inherit;
+  border: none;
+  color: white;
+  margin-inline: 3px;
+  font-size: 1.1rem;
+}
+
+.select-image {
+  background-color: inherit;
+  border: none;
+}
+
+.back {
+  text-decoration: none;
+  color: white;
+  font-size: 1.3rem;
+}
+
+.inputfile {
+  width: 0.1px;
+  height: 0.1px;
+  opacity: 0;
+  overflow: hidden;
+  position: absolute;
+  z-index: -1;
+}
+
+.hamburger-button {
+  background-color: inherit;
+  color: inherit;
+  font-size: 2rem;
+  border: none;
+  margin-inline: 5px;
+}
