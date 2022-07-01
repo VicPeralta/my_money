@@ -1,6 +1,6 @@
 class CategoriesController < ApplicationController
   def index
-    @categories = Category.includes(image_attachment: :blob).where(user: current_user)
+    @categories = Category.includes(image_attachment: :blob).where(user: current_user).order('created_at DESC')
   end
 
   def new

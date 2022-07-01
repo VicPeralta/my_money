@@ -8,5 +8,5 @@
     <p class="text text-color bold"><%=@transaction.name%></p>
     <p class="text"><%=number_to_currency @transaction.amount%></p>
   </div>
-  <p class="font-small italic"><%=@transaction.created_at.strftime("%Y/%m/%d %H:%M:%S")%></p>
+  <p class="font-small italic"><%=@transaction.created_at.localtime.ctime%></p>
 </div>

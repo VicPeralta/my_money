@@ -19,7 +19,7 @@
             </a>
             <p class="text"><%=number_to_currency entity.amount%></p>
           </div>
-          <p class="font-small italic"><%=@category.created_at.strftime("%Y/%m/%d")%></p>
+          <p class="font-small italic"><%=entity.created_at.localtime.ctime%></p>
         </div>
     <%end%>
 </div>
