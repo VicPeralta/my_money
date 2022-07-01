@@ -4,12 +4,12 @@
         locals: {title: "Add Category", form: form, button: "Create", back: categories_index_path}%>
     <div class="field">
       <div class="flex row align-center margin-10">
-        <img src=<%=image_path("save-money.png")%>/>
+      <img src=<%=image_path("save-money.png")%> id='image-file' class="img-w60"/>
         <label id="label-for-image" for="category_image" 
-            class="text-color font-large margin-left-10 underlined">
+            class="color-white font-large margin-left-10 underlined">
           Upload picture 
         </label>
-        <%= form.file_field :image, class:"inputfile" %>
+        <%= form.file_field :image, accept: 'image/png,image/jpeg', class:"inputfile" %>
       </div>
       <%= form.text_field :name, autofocus: true, placeholder: "Name" %>
     </div>
@@ -19,8 +19,13 @@
 <script>
   document.getElementById('category_image').addEventListener('change', (e) => {
     if(e.target.files.length == 1){
-      fileName = e.target.files[0].name;
-      document.getElementById('label-for-image').textContent = fileName;
+      const file = e.target.files[0];
+      document.getElementById('label-for-image').textContent = file.name;
+      const reader = new FileReader();
+      reader.readAsDataURL(file);
+      reader.onload = readerEvent => {
+        document.getElementById('image-file').src = reader.result;
+      }
     }
     console.log(e.target.files)
   });
