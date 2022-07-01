@@ -147,7 +147,7 @@
 }
 
 .btn:active {
-  background-color: var(--main-bg-color);
+  background-color: var(--second-color);
   border: none;
   color: white;
 }
@@ -157,7 +157,7 @@
 }
 
 .btn:focus-visible {
-  background-color: var(--main-bg-color);
+  background-color: var(--second-color);
   border: none;
   outline: none;
   color: white;
