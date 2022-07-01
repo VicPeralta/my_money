@@ -15,7 +15,7 @@
   position: absolute;
 }
 
-.menu-container button {
+.menu-options button {
   background-color: transparent;
   color: #fff;
   border: none;
@@ -39,9 +39,9 @@
 }
 
 .menu-container ul li a {
-  font-size: 27px;
+  font-size: 22px;
   font-style: normal;
-  line-height: 44px;
+  line-height: 30px;
   letter-spacing: 0;
   text-align: left;
   color: white;
