@@ -1,19 +1,7 @@
-<div class="flex main-bg-color color-white justify-center align-center justify-between height-40px">
-  <a class="back ml-10 color-white" data-method="get" href="<%=categories_index_path%>">
-    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 color-white" viewBox="0 0 20 20" fill="currentColor">
-      <path fill-rule="evenodd" d="M9.707 16.707a1 1 0 01-1.414 0l-6-6a1 1 0 010-1.414l6-6a1 1 0 011.414 1.414L5.414 9H17a1 1 0 110 2H5.414l4.293 4.293a1 1 0 010 1.414z" clip-rule="evenodd" />
-    </svg>
-  </a>
-  <h2>Transactions</h2>
-  <div class="actions color-white">
-    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 height-20px mr-20" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-      <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
-    </svg>
-  </div>
-</div>
+<%= render partial:'shared/back_menu', locals: {title: "Transactions", back: categories_index_path}%>
  <div class="flex justify-between padding-20 color-bg-white margin-bottom-10">
       <% if @category.image.attached?%>
-        <img src=<%=url_for(@category.image)%> class="rounded img-w100"/>
+        <img src=<%=url_for(@category.image)%> class="rounded img-w60"/>
       <%else%>
         <img src=<%=image_path("save-money.png")%> class="rounded img-w60 flex-1"/>
        <%end%>
@@ -22,18 +10,19 @@
         <p class="bold text text-color" >  <%=number_to_currency @category.entities.where(user: current_user).sum(:amount)%> </p>
       </div>
     </div>
-<div class="container flex column gap-10 ">  
+<div class="container flex column">  
     <%@entities.each do |entity|%>
-        <div class="flex column justify-between color-bg-white padding-20">
-          <div class="flex justify-between">
+        <div class="flex column rounded margin-10 justify-between padding-20 color-bg-white">
+          <div class="flex justify-between margin-button-5">
             <a href=<%=entity_detail_path(entity_id: entity.id, category_id: @category.id )%> class="text">
               <p class="text text-color bold"><%=entity.name%></p>
             </a>
             <p class="text"><%=number_to_currency entity.amount%></p>
           </div>
-          <p class="font-small italic"><%=@category.created_at.strftime("%Y/%m/%d")%></p>
+          <p class="font-small italic"><%= time_tag(entity.created_at,
+              "data-local": "time-ago")%></p>
         </div>
     <%end%>
 </div>
  <%=button_to 'Add Transaction', entity_new_path(category_id: @category.id), method: :get,
-    class:'btn color-white second-bg-color padding-10 width-100 height-70px'%>
+    class:'btn color-white rounded second-bg-color padding-10 width-300px block margin-inline-auto height-70px'%>

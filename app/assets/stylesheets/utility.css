@@ -8,6 +8,10 @@
   font-size: 0.8rem;
 }
 
+.font-regular {
+  font-size: 1rem;
+}
+
 .font-large {
   font-size: 1.3rem;
 }
@@ -26,6 +30,14 @@
 
 .italic {
   font-style: italic;
+}
+
+.block {
+  display: block;
+}
+
+.margin-inline-auto {
+  margin-inline: auto;
 }
 
 .flex {
@@ -50,6 +62,10 @@
 
 .rounded {
   border-radius: 8px;
+}
+
+.rounded-50 {
+  border-radius: 50%;
 }
 
 .top-5 {
@@ -131,10 +147,15 @@
   border: none;
   font-size: 1.1rem;
   background-color: inherit;
+  cursor: pointer;
+}
+
+.pointer {
+  cursor: pointer;
 }
 
 .btn:active {
-  background-color: var(--main-bg-color);
+  background-color: var(--second-color);
   border: none;
   color: white;
 }
@@ -144,7 +165,7 @@
 }
 
 .btn:focus-visible {
-  background-color: var(--main-bg-color);
+  background-color: var(--second-color);
   border: none;
   outline: none;
   color: white;
@@ -152,6 +173,10 @@
 
 .margin-auto {
   margin-inline: auto;
+}
+
+.margin-button-5 {
+  margin-bottom: 5px;
 }
 
 .margin-button-10 {
@@ -176,6 +201,10 @@
 
 .width-100 {
   width: 100%;
+}
+
+.width-300px {
+  width: 300px;
 }
 
 .height-70px {
@@ -216,6 +245,14 @@
 
 .padding-20 {
   padding: 20px;
+}
+
+.padding-tb-30 {
+  padding: 30px 0;
+}
+
+.padding-tb-20 {
+  padding: 20px 0;
 }
 
 .main-color {

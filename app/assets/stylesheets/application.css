@@ -104,6 +104,10 @@ textarea {
   font-size: 1.1rem;
 }
 
+.actions input[type="submit"] {
+  cursor: pointer;
+}
+
 .select-image {
   background-color: inherit;
   border: none;

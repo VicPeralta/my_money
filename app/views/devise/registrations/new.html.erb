@@ -3,22 +3,14 @@
   <%= form_for(resource, as: resource_name, 
     data: { turbo: false }, 
     url: registration_path(resource_name)) do |f| %>
-    <div class="flex main-bg-color color-white justify-center align-center justify-between height-40px">
-      <a class="back ml-10 color-white" data-method="get" href="<%=root_path%>">
-        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 color-white" viewBox="0 0 20 20" fill="currentColor">
-          <path fill-rule="evenodd" d="M9.707 16.707a1 1 0 01-1.414 0l-6-6a1 1 0 010-1.414l6-6a1 1 0 011.414 1.414L5.414 9H17a1 1 0 110 2H5.414l4.293 4.293a1 1 0 010 1.414z" clip-rule="evenodd" />
-        </svg>
-      </a>
-      <h2>Sign up</h2>
-      <div class="actions">
-        <%= f.submit "Next" %>
-      </div>
-    </div>
+    <%= render partial:'shared/back_form', 
+      locals: {title: "Sign up", form: f, button: "Next", back: root_path}
+    %>
     <div class="field">
       <div class="flex row align-center margin-10">
-        <img src=<%=image_path("user.png")%>/>
+        <img src=<%=image_path("user.png")%> id='image-file' class="img-w60"/>
         <label id="label-for-image" for="user_image" class="text-color font-large margin-left-10 underlined">Upload picture </label>
-        <%= f.file_field :image, class:"inputfile" %>
+        <%= f.file_field :image, accept: 'image/png,image/jpeg', class:"inputfile" %>
       </div>
       <%= f.text_field :name, autofocus: true, autocomplete: "name", placeholder: "Ful name" %>
       <%= f.email_field :email, autofocus: true, autocomplete: "email", placeholder: "Email" %>
@@ -29,10 +21,12 @@
 </div>
 <script>
   document.getElementById('user_image').addEventListener('change', (e) => {
-    if(e.target.files.length == 1){
-      fileName = e.target.files[0].name;
-      document.getElementById('label-for-image').textContent = fileName;
-    }
-    console.log(e.target.files)
+    const file = e.target.files[0];
+      document.getElementById('label-for-image').textContent = file.name;
+      const reader = new FileReader();
+      reader.readAsDataURL(file);
+      reader.onload = readerEvent => {
+        document.getElementById('image-file').src = reader.result;
+      }
   });
 </script>

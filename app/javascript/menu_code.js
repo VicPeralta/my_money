@@ -11,14 +11,14 @@ function makeNotScrollable() {
 }
 
 function closeMenu() {
-  const menu = document.querySelector('.menu-options');
+  const menu = document.querySelector('.menu-container');
   menu.classList.remove('visible');
   menu.classList.add('invisible');
   makeScrollable();
 }
 
 document.querySelector('.hamburger-button').addEventListener('click', () => {
-  const menu = document.querySelector('.menu-options');
+  const menu = document.querySelector('.menu-container');
   menu.classList.remove('invisible');
   menu.classList.add('visible');
   makeNotScrollable();
