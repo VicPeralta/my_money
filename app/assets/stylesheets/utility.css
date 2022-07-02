@@ -8,6 +8,10 @@
   font-size: 0.8rem;
 }
 
+.font-regular {
+  font-size: 1rem;
+}
+
 .font-large {
   font-size: 1.3rem;
 }
@@ -169,6 +173,10 @@
 
 .margin-auto {
   margin-inline: auto;
+}
+
+.margin-button-5 {
+  margin-bottom: 5px;
 }
 
 .margin-button-10 {

@@ -5,9 +5,10 @@
     <p class="bold"><%=@transaction.id%></p>
   </div>
   <div class="flex justify-between margin-bottom-10">
-    <p class="text text-color bold"><%=@transaction.name%></p>
+    <p class="text text-color font-large bold"><%=@transaction.name%></p>
     <p class="text"><%=number_to_currency @transaction.amount%></p>
   </div>
-  <p class="font-small italic"><%= time_tag(@transaction.created_at,
-              "data-local": "time")%></p>
+  
+  <p class="font-regular italic"><%= time_tag(@transaction.created_at,
+              "data-local": "time", "data-format": "%B %d, %Y %l:%M:%S %P")%></p>
 </div>

@@ -13,7 +13,7 @@
 <div class="container flex column">  
     <%@entities.each do |entity|%>
         <div class="flex column rounded margin-10 justify-between padding-20 color-bg-white">
-          <div class="flex justify-between">
+          <div class="flex justify-between margin-button-5">
             <a href=<%=entity_detail_path(entity_id: entity.id, category_id: @category.id )%> class="text">
               <p class="text text-color bold"><%=entity.name%></p>
             </a>
