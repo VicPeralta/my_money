@@ -3,14 +3,14 @@
   width: 100vw;
   height: 100vh;
   position: absolute;
-  backdrop-filter: blur(2px);
+  backdrop-filter: brightness(0.5);
   left: 0;
   top: 0;
 }
 
 .menu-options {
   background-color: var(--main-bg-color);
-  width: 60vw;
+  width: 70vw;
   height: 100vh;
   position: absolute;
 }

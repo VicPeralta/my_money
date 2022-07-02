@@ -9,7 +9,7 @@
     <div class="field">
       <div class="flex row align-center margin-10">
         <img src=<%=image_path("user.png")%> id='image-file' class="img-w60"/>
-        <label id="label-for-image" for="user_image" class="color-white font-large margin-left-10 underlined">Upload picture </label>
+        <label id="label-for-image" for="user_image" class="text-color font-large margin-left-10 underlined">Upload picture </label>
         <%= f.file_field :image, accept: 'image/png,image/jpeg', class:"inputfile" %>
       </div>
       <%= f.text_field :name, autofocus: true, autocomplete: "name", placeholder: "Ful name" %>

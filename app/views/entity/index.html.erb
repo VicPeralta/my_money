@@ -19,7 +19,8 @@
             </a>
             <p class="text"><%=number_to_currency entity.amount%></p>
           </div>
-          <p class="font-small italic"><%=entity.created_at.localtime.ctime%></p>
+          <p class="font-small italic"><%= time_tag(entity.created_at,
+              "data-local": "time-ago")%></p>
         </div>
     <%end%>
 </div>

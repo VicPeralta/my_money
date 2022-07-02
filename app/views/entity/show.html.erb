@@ -8,5 +8,6 @@
     <p class="text text-color bold"><%=@transaction.name%></p>
     <p class="text"><%=number_to_currency @transaction.amount%></p>
   </div>
-  <p class="font-small italic"><%=@transaction.created_at.localtime.ctime%></p>
+  <p class="font-small italic"><%= time_tag(@transaction.created_at,
+              "data-local": "time")%></p>
 </div>

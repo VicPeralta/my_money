@@ -60,6 +60,10 @@
   border-radius: 8px;
 }
 
+.rounded-50 {
+  border-radius: 50%;
+}
+
 .top-5 {
   top: 5px;
 }
