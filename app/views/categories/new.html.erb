@@ -4,7 +4,7 @@
         locals: {title: "Add Category", form: form, button: "Create", back: categories_index_path}%>
     <div class="field">
       <div class="flex row align-center margin-10">
-      <img src=<%=image_path("save-money.png")%> id='image-file' class="img-w60"/>
+        <img src=<%=image_path("save-money.png")%> id='image-file' class="img-w60"/>
         <label id="label-for-image" for="category_image" 
             class="text-color font-large margin-left-10 underlined">
           Upload picture 
@@ -15,7 +15,6 @@
     </div>
   <% end %>
 </div>
-
 <script>
   document.getElementById('category_image').addEventListener('change', (e) => {
     if(e.target.files.length == 1){

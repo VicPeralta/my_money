@@ -17,13 +17,22 @@ function closeMenu() {
   makeScrollable();
 }
 
-document.querySelector('.hamburger-button').addEventListener('click', () => {
-  const menu = document.querySelector('.menu-container');
-  menu.classList.remove('invisible');
-  menu.classList.add('visible');
-  makeNotScrollable();
+
+
+// Open menu
+document.getElementById('hamburger-button').addEventListener('click', () => {
+  document.getElementById('menu').classList.toggle('hidden');
 });
 
-document.querySelector('#close-btn').addEventListener('click', () => {
-  closeMenu();
+// Click outside close the menu
+document.getElementById('menu').addEventListener('click', (e) => {
+  const menuOptions = document.getElementById('menu-options')
+  if(menuOptions.contains(e.target)) {
+    console.log(e.target)
+  } else {
+    console.log('outside close the menu');
+    const menu = document.getElementById('menu')
+    if(!menu.classList.contains('hidden'))
+      document.getElementById('menu').classList.toggle('hidden');
+  }
 });

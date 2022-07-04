@@ -1,28 +1,28 @@
 <%= render partial:'shared/back_menu', locals: {title: "Transactions", back: categories_index_path}%>
- <div class="flex justify-between padding-20 color-bg-white margin-bottom-10">
-      <% if @category.image.attached?%>
-        <img src=<%=url_for(@category.image)%> class="rounded img-w60"/>
-      <%else%>
-        <img src=<%=image_path("save-money.png")%> class="rounded img-w60 flex-1"/>
-       <%end%>
-      <div class="flex align-center flex-3 justify-between padding-20">
-        <p class="font-large text-color text"> <%=@category.name%> </p>
-        <p class="bold text text-color" >  <%=number_to_currency @category.entities.where(user: current_user).sum(:amount)%> </p>
-      </div>
-    </div>
-<div class="container flex column">  
-    <%@entities.each do |entity|%>
-        <div class="flex column rounded margin-10 justify-between padding-20 color-bg-white">
-          <div class="flex justify-between margin-button-5">
-            <a href=<%=entity_detail_path(entity_id: entity.id, category_id: @category.id )%> class="text">
-              <p class="text text-color bold"><%=entity.name%></p>
-            </a>
-            <p class="text"><%=number_to_currency entity.amount%></p>
-          </div>
-          <p class="font-small italic"><%= time_tag(entity.created_at,
-              "data-local": "time-ago")%></p>
-        </div>
-    <%end%>
+<div class="flex justify-between padding-20 color-bg-white margin-bottom-10">
+  <% if @category.image.attached?%>
+    <img src=<%=url_for(@category.image)%> class="rounded img-w60"/>
+  <%else%>
+    <img src=<%=image_path("save-money.png")%> class="rounded img-w60 flex-1"/>
+  <%end%>
+  <div class="flex align-center flex-3 justify-between padding-20">
+    <p class="font-large text-color text"> <%=@category.name%> </p>
+    <p class="bold text text-color" >  <%=number_to_currency @category.entities.where(user: current_user).sum(:amount)%> </p>
+  </div>
 </div>
- <%=button_to 'Add Transaction', entity_new_path(category_id: @category.id), method: :get,
+<div class="container flex column">
+  <%@entities.each do |entity|%>
+    <div class="flex column rounded margin-10 justify-between padding-20 color-bg-white">
+      <div class="flex justify-between margin-button-5">
+        <a href=<%=entity_detail_path(entity_id: entity.id, category_id: @category.id )%> class="text">
+          <p class="text text-color bold"><%=entity.name%></p>
+        </a>
+        <p class="text"><%=number_to_currency entity.amount%></p>
+      </div>
+      <p class="font-small italic"><%= time_tag(entity.created_at,
+              "data-local": "time-ago")%></p>
+    </div>
+  <%end%>
+</div>
+<%=button_to 'Add Transaction', entity_new_path(category_id: @category.id), method: :get,
     class:'btn color-white rounded second-bg-color padding-10 width-300px block margin-inline-auto height-70px'%>

@@ -1,25 +1,35 @@
-<div class="menu-container invisible">
-  <div class="menu-options" >
-    <button type="button" id="close-btn">X</button>
-    <div class="rounded flex justify-center">
-      <% if current_user.image.attached?%>
-        <img src=<%=url_for(current_user.image)%> class="rounded img-w100"/>
-      <%else%>
-        <img src=<%=image_path("user.png")%> class="rounded img-w100"/>
-      <%end%>
+<%# Main menu container %>
+<div class="menu-container hidden" id='menu'>
+  <%# Lateral bar %>
+  <div class="w-80 h-screen bg-white" id="menu-options">
+    <!-- Header -->
+    <div class="w-auto h-50 main-bg-color pt-3 pl-5">
+      <div class="w-20 h-20 rounded-full bg-white">
+        <% if current_user.image.attached?%>
+          <img src=<%=url_for(current_user.image)%> class="rounded-full w-20 h-20"/>
+        <%else%>
+          <img src=<%=image_path("user.png")%> class="rounded-full w-20 h-20"/>
+        <%end%>
+      </div>
+      <p class="pt-3 leading-none pl-2 text-white text-lg">
+        <%=current_user.name%>
+      </p>
+      <p class="pb-2 pl-2 text-white text-sm font-thin">
+        <%=current_user.email%>
+      </p>
     </div>
-    <h3 class="color-white margin-20 text-center">
-      <%=current_user.name%>
-    </h3>
-    <ul>
-      <li>
-        <%= link_to "Home", root_path, class: '' %>
-      <li>
-        <%=link_to "Log out", destroy_user_session_path, 
+    <!-- Menu options -->
+    <div class="flex ml-5 mt-5 items-center">
+      <img src=<%=image_path("hogar.png")%> alt="" class=" w-10 h-10">
+      <%= link_to "Home", '/categories/index', 
+      class: 'ml-5 decoration-none text-color' %>
+    </div>
+    <div class="flex ml-5 mt-5 items-center">
+      <img src=<%=image_path("logout.png")%> alt="" class=" w-10 h-10">
+      <%=link_to "Log out", destroy_user_session_path, 
+      class: "ml-5 decoration-none text-color ", 
             method: :get %>
-      </li>
-    </ul>
-    <hr>
-    <%= javascript_include_tag 'menu_code' %>
+    </div>
   </div>
+  <%= javascript_include_tag 'menu_code' %>
 </div>

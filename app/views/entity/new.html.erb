@@ -2,7 +2,7 @@
   <%= form_with model: @entity, method:'post', 
       class:'form',
       url: entity_create_path(category_id: @category.id) do |form| %>
-  <%= render partial:'shared/back_form', 
+    <%= render partial:'shared/back_form', 
     locals: {title: "Add Transaction", form: form, button: "Create", back: entity_index_path(category_id: @category.id)}
   %>
     <div class="field">
